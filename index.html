@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fitxer.css" />    
+</head>
+<body>
+    <div class="container">
+        <script>
+            var x = prompt("Escriu un nombre entre 1 i 10");
+            x = parseInt(x);
+            document.write("<table border='1'>");
+            var x;
+            var y;
+            if (x<=0 || x>=11 || isNaN(x)){
+                var x = prompt("Per aquest valor introduit no hi ha cap taula definida")
+            } else {
+                for (y = 1; y <= 10; y++) {
+            document.write("<tr id='tr'>");
+            document.write("<td id='row'>" + x + "x" + y + "=" + "</td>" + "<td>" + (x*y) + "</td>");
+            document.write("</tr>");
+
+            }
+            
+            }
+            document.write("<br>");
+            document.write("</table>");   
+        </script>
+    </div>
+</body>
+</html>
