@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculadora</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="fitxer.css" />    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> 
 </head>
 <body>
     <div class="container">
         <script>
             var x = prompt("Escriu un nombre entre 1 i 10");
             x = parseInt(x);
-            document.write("<table border='1'>");
-            var x;
-            var y;
+            document.write('<table class=table-striped>');
+            var x; //variable que l'usuari introduirà
+            var y; 
+            document.write("Taula del "+x+":");
             if (x<=0 || x>=11 || isNaN(x)){
+                // si una de les tres condicions es compleix, hem d'introduir un altre nombre
                 var x = prompt("Per aquest valor introduit no hi ha cap taula definida")
             } else {
-                for (y = 1; y <= 10; y++) {
+                for (y = 1; y <= 10; y++) {    
             document.write("<tr id='tr'>");
             document.write("<td id='row'>" + x + "x" + y + "=" + "</td>" + "<td>" + (x*y) + "</td>");
             document.write("</tr>");
